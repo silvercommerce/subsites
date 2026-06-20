@@ -79,14 +79,7 @@ class DataObjectExtension extends DataExtension
             return;
         }
 
-        $subsiteID = null;
-
-        if (Subsite::$force_subsite) {
-            $subsiteID = Subsite::$force_subsite;
-        } else {
-            $subsiteID = SubsiteState::singleton()->getSubsiteId();
-        }
-
+        $subsiteID = SubsiteState::singleton()->getSubsiteId();
         if ($subsiteID === null) {
             return;
         }
