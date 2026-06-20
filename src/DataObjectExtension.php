@@ -30,7 +30,7 @@ class DataObjectExtension extends DataExtension
             HiddenField::create(
                 'SubsiteID',
                 'SubsiteID',
-                Subsite::currentSubsiteID()
+                SubsiteState::singleton()->getSubsiteId()
             )
         );
     }
